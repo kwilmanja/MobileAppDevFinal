@@ -33,18 +33,12 @@ class ViewController: UIViewController {
         //MARK: handling if the Authentication state is changed (sign in, sign out, register)...
         handleAuth = Auth.auth().addStateDidChangeListener{ auth, user in
             if user == nil{
-                //MARK: not signed in...
-                self.currentUser = nil
-                self.mainScreen.labelText.text = "Please sign in to see the notes!"
-                self.mainScreen.floatingButtonAddChat.isEnabled = false
-                self.mainScreen.floatingButtonAddChat.isHidden = true
+                
+                self.signIn()
                 
                 //MARK: Reset tableView...
                 self.contactsList.removeAll()
                 self.mainScreen.tableViewContacts.reloadData()
-                
-                //MARK: Sign in bar button...
-                self.setupRightBarButton(isLoggedin: false)
                 
             }else{
                 //MARK: the user is signed in...
@@ -83,7 +77,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "MyAgenda"
+        title = "Tasks"
         
         //MARK: patching table view delegate and data source...
         mainScreen.tableViewContacts.delegate = self

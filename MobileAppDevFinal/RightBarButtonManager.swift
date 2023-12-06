@@ -93,7 +93,7 @@ extension ViewController{
     @objc func onAddButtonTapped(){
         
 //        self.toSettings()
-        self.toTab()
+//        self.toTab()
         
     }
     
@@ -103,10 +103,10 @@ extension ViewController{
         navigationController?.pushViewController(settingsController, animated: true)
     }
     
-    @objc func toTab(){
-        let tabController = TabBarController()
-        navigationController?.pushViewController(tabController, animated: true)
-    }
+//    @objc func toTab(){
+//        let tabController = TabBarController()
+//        navigationController?.pushViewController(tabController, animated: true)
+//    }
     
     func signInToFirebase(email: String, password: String){
         //MARK: can you display progress indicator here?
