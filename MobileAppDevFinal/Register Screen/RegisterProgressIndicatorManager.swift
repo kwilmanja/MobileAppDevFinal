@@ -13,7 +13,7 @@ extension RegisterViewController:ProgressSpinnerDelegate{
         view.addSubview(childProgressView.view)
         childProgressView.didMove(toParent: self)
     }
-    
+
     func hideActivityIndicator(){
         childProgressView.willMove(toParent: nil)
         childProgressView.view.removeFromSuperview()

@@ -25,6 +25,7 @@ class RegisterViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = true
         registerView.buttonRegister.addTarget(self, action: #selector(onRegisterTapped), for: .touchUpInside)
         title = "Register"
+        
     }
     
     @objc func onRegisterTapped(){

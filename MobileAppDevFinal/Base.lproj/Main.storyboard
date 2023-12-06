@@ -11,7 +11,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="zje-VN-06L">
             <objects>
-                <tabBarController id="rAo-LS-uyd" sceneMemberID="viewController">
+                <tabBarController id="rAo-LS-uyd" customClass="TabBarController" customModule="MobileAppDevFinal" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fRW-sG-8iI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -131,6 +131,21 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WEv-hd-OEj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1712" y="1482"/>
+        </scene>
+        <!--Register View Controller-->
+        <scene sceneID="nUf-yt-Rtz">
+            <objects>
+                <viewController id="nXh-kn-7P8" customClass="RegisterViewController" customModule="MobileAppDevFinal" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="oxh-MP-IpZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="25R-b8-KPd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iLg-iR-rnm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-422" y="-185"/>
         </scene>
     </scenes>
     <resources>

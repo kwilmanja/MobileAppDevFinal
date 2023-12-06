@@ -13,7 +13,6 @@ extension RegisterViewController{
     
     func registerNewAccount(){
         //MARK: display the progress indicator...
-        showActivityIndicator()
         //MARK: create a Firebase user with email and password...
         if let name = registerView.textFieldName.text,
            let email = registerView.textFieldEmail.text,
@@ -26,7 +25,6 @@ extension RegisterViewController{
                 }else{
                     //MARK: there is a error creating the user...
                     self.showError(error!.localizedDescription)
-                    self.hideActivityIndicator()
                 }
             })
         }
@@ -44,7 +42,6 @@ extension RegisterViewController{
             }else{
                 //MARK: there was an error updating the profile...
                 print("Error occured: \(String(describing: error))")
-                self.hideActivityIndicator()
             }
         })
     }
@@ -53,9 +50,9 @@ extension RegisterViewController{
         do {
             try self.database.collection("users").document(email.lowercased()).setData(from: user, completion: {(error) in
                 if error == nil {
-                    self.hideActivityIndicator()
-                    self.navigationController?.popViewController(animated: true)
-                }
+                    
+                    let tabController = TabBarController()
+                    self.navigationController?.pushViewController(tabController, animated: true)                }
             })
         } catch {
             print("Error in adding new user to Firestore!")
