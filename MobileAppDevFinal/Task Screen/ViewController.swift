@@ -34,7 +34,7 @@ class ViewController: UIViewController {
         handleAuth = Auth.auth().addStateDidChangeListener{ auth, user in
             if user == nil{
                 
-                self.signIn()
+            
                 
                 //MARK: Reset tableView...
                 self.contactsList.removeAll()

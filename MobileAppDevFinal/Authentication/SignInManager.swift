@@ -9,12 +9,13 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-extension ViewController{
+extension TabBarController{
     
-    @objc func signIn(){
+    
+    @objc func signInAlert(msg: String){
         let signInAlert = UIAlertController(
             title: "Sign In / Register",
-            message: "Please sign in to continue.",
+            message: msg,
             preferredStyle: .alert)
         
         //MARK: setting up email textField in the alert...
@@ -43,8 +44,8 @@ extension ViewController{
         //MARK: Register Action...
         let registerAction = UIAlertAction(title: "Register", style: .default, handler: {(_) in
             //MARK: logic to open the register screen...
-            let registerViewController = RegisterViewController()
-            self.navigationController?.pushViewController(registerViewController, animated: true)
+            self.registerAlert(msg: "Please register to use the app")
+
         })
         
         
@@ -55,11 +56,33 @@ extension ViewController{
         self.present(signInAlert, animated: true, completion: {() in
             //MARK: hide the alerton tap outside...
             signInAlert.view.superview?.isUserInteractionEnabled = true
-            signInAlert.view.superview?.addGestureRecognizer(
-                UITapGestureRecognizer(target: self, action: #selector(self.onTapOutsideAlert))
-            )
         })
     }
     
+    
+    func signIn(email: String, password: String) {
+        
+        if self.isValidEmail(email) {
+            // sign in via firebase
+            Auth.auth().signIn(withEmail: email, password: password, completion: { (result, error) in
+                if error == nil {
+                    // user authenticated, hide progress bar
+                } else {
+                    // show login error
+                    self.signInAlert(msg: "No user is found or password is incorrect.")
+                }
+            })
+        } else {
+            self.signInAlert(msg: "The email is invalid!")
+        }
+    }
+    
+    func isValidEmail(_ email:String) -> Bool {
+        let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
+        let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)
+        
+        return emailPred.evaluate(with: email)
+    }
+
     
 }
