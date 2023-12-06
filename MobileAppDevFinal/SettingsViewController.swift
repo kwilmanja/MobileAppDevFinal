@@ -25,20 +25,25 @@ class SettingsViewController: UIViewController {
         
         self.title = "Settings"
         
+        if let user = Auth.auth().currentUser {
+            self.settingsScreen.labelName.text = user.displayName!
+            self.settingsScreen.labelEmail.text = user.email!
+        }
         
-
-        self.settingsScreen.labelName.text = currentUser?.displayName!
-        self.settingsScreen.labelEmail.text = currentUser?.email!
+        self.settingsScreen.buttonLogout.addTarget(self, action: #selector(logout), for: .touchUpInside)
+        
 
         // Do any additional setup after loading the view.
     }
     
 
-    func logout(){
+    @objc func logout(){
         let logoutAlert = UIAlertController(title: "Logging out!", message: "Are you sure want to log out?", preferredStyle: .actionSheet)
         logoutAlert.addAction(UIAlertAction(title: "Yes, log out!", style: .default, handler: {(_) in
                 do{
                     try Auth.auth().signOut()
+                    self.settingsScreen.labelName.text = ""
+                    self.settingsScreen.labelEmail.text = ""
                 }catch{
                     print("Error occured!")
                 }
@@ -47,6 +52,8 @@ class SettingsViewController: UIViewController {
         logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
 
         self.present(logoutAlert, animated: true)
+        
+        
     }
 
 }
