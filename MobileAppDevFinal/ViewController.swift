@@ -83,7 +83,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Chats"
+        title = "MyAgenda"
         
         //MARK: patching table view delegate and data source...
         mainScreen.tableViewContacts.delegate = self
@@ -93,7 +93,7 @@ class ViewController: UIViewController {
         mainScreen.tableViewContacts.separatorStyle = .none
         
         //MARK: Make the titles look large...
-        navigationController?.navigationBar.prefersLargeTitles = true
+//        navigationController?.navigationBar.prefersLargeTitles = true
         
         //MARK: Put the floating button above all the views...
         view.bringSubviewToFront(mainScreen.floatingButtonAddChat)

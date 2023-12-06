@@ -13,11 +13,13 @@ extension ViewController{
         if isLoggedin{
             //MARK: user is logged in...
             let barText = UIBarButtonItem(
-                title: "Logout",
+                title: "Add Task",
                 style: .plain,
                 target: self,
-                action: #selector(onLogOutBarButtonTapped)
+                action: #selector(onAddButtonTapped)
             )
+            
+//            let barText = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(onLogOutBarButtonTapped))
             
             navigationItem.rightBarButtonItem = barText
             
@@ -88,19 +90,22 @@ extension ViewController{
         self.dismiss(animated: true)
     }
     
-    @objc func onLogOutBarButtonTapped(){
-        let logoutAlert = UIAlertController(title: "Logging out!", message: "Are you sure want to log out?", preferredStyle: .actionSheet)
-        logoutAlert.addAction(UIAlertAction(title: "Yes, log out!", style: .default, handler: {(_) in
-                do{
-                    try Auth.auth().signOut()
-                }catch{
-                    print("Error occured!")
-                }
-            })
-        )
-        logoutAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+    @objc func onAddButtonTapped(){
         
-        self.present(logoutAlert, animated: true)
+//        self.toSettings()
+        self.toTab()
+        
+    }
+    
+    @objc func toSettings(){
+        let settingsController = SettingsViewController()
+        settingsController.currentUser = self.currentUser
+        navigationController?.pushViewController(settingsController, animated: true)
+    }
+    
+    @objc func toTab(){
+        let tabController = TabBarController()
+        navigationController?.pushViewController(tabController, animated: true)
     }
     
     func signInToFirebase(email: String, password: String){
