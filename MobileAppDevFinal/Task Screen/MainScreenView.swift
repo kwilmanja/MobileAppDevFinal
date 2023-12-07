@@ -10,7 +10,6 @@ import UIKit
 class MainScreenView: UIView {
     var profilePic: UIImageView!
     var labelText: UILabel!
-    var floatingButtonAddChat: UIButton!
     var tableViewContacts: UITableView!
     
     override init(frame: CGRect) {
@@ -19,7 +18,6 @@ class MainScreenView: UIView {
         
         setupProfilePic()
         setupLabelText()
-        setupFloatingButtonAddChat()
         setupTableViewContacts()
         initConstraints()
     }
@@ -49,22 +47,6 @@ class MainScreenView: UIView {
         self.addSubview(tableViewContacts)
     }
     
-    func setupFloatingButtonAddChat(){
-        floatingButtonAddChat = UIButton(type: .system)
-        floatingButtonAddChat.setTitle("", for: .normal)
-        floatingButtonAddChat.setImage(UIImage(systemName: "plus.message")?.withRenderingMode(.alwaysOriginal), for: .normal)
-        floatingButtonAddChat.contentHorizontalAlignment = .fill
-        floatingButtonAddChat.contentVerticalAlignment = .fill
-        floatingButtonAddChat.imageView?.contentMode = .scaleAspectFit
-        floatingButtonAddChat.layer.cornerRadius = 16
-        floatingButtonAddChat.imageView?.layer.shadowOffset = .zero
-        floatingButtonAddChat.imageView?.layer.shadowRadius = 0.8
-        floatingButtonAddChat.imageView?.layer.shadowOpacity = 0.7
-        floatingButtonAddChat.imageView?.clipsToBounds = true
-        floatingButtonAddChat.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(floatingButtonAddChat)
-    }
-    
     
     //MARK: setting up constraints...
     func initConstraints(){
@@ -81,13 +63,7 @@ class MainScreenView: UIView {
             tableViewContacts.topAnchor.constraint(equalTo: profilePic.bottomAnchor, constant: 8),
             tableViewContacts.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8),
             tableViewContacts.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            tableViewContacts.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
-            floatingButtonAddChat.widthAnchor.constraint(equalToConstant: 48),
-            floatingButtonAddChat.heightAnchor.constraint(equalToConstant: 48),
-            floatingButtonAddChat.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -16),
-            floatingButtonAddChat.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16),
-            
+            tableViewContacts.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
     

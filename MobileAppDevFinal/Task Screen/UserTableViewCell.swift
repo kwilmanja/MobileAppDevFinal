@@ -51,6 +51,7 @@ class UserTableViewCell: UITableViewCell {
         wrapperCellView.addSubview(email)
     }
     
+    
     func initConstraints() {
         NSLayoutConstraint.activate([
             wrapperCellView.topAnchor.constraint(equalTo: self.topAnchor, constant: 10),
