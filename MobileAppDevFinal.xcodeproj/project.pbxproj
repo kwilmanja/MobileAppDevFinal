@@ -119,19 +119,6 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		5A06E3422B21399100505603 /* Tasks Screen */ = {
-			isa = PBXGroup;
-			children = (
-				5A06E3432B21399100505603 /* ViewController.swift */,
-				5A06E34B2B21399200505603 /* MainScreenView.swift */,
-				5A06E3462B21399200505603 /* TaskTableViewManager.swift */,
-				5A06E3312B21399100505603 /* TaskTableViewCell.swift */,
-				5A06E3712B213A8900505603 /* Task.swift */,
-				5A06E37D2B21464100505603 /* GetTaskManager.swift */,
-			);
-			path = "Tasks Screen";
-			sourceTree = "<group>";
-		};
 		5A06E3852B21784000505603 /* Groups Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +156,19 @@
 			path = "Add Task Screen";
 			sourceTree = "<group>";
 		};
+		5A06E3AE2B23A4DC00505603 /* Main Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5A06E34B2B21399200505603 /* MainScreenView.swift */,
+				5A06E3432B21399100505603 /* ViewController.swift */,
+				5A06E3462B21399200505603 /* TaskTableViewManager.swift */,
+				5A06E3312B21399100505603 /* TaskTableViewCell.swift */,
+				5A06E3712B213A8900505603 /* Task.swift */,
+				5A06E37D2B21464100505603 /* GetTaskManager.swift */,
+			);
+			path = "Main Screen";
+			sourceTree = "<group>";
+		};
 		5AE6F2DC2B0BEA58001C815F = {
 			isa = PBXGroup;
 			children = (
@@ -200,13 +200,13 @@
 				5A06E3402B21399100505603 /* RightBarButtonManager.swift */,
 				5A06E3302B21399100505603 /* SettingsView.swift */,
 				5A06E3882B22971100505603 /* Configs.swift */,
+				5A06E3AE2B23A4DC00505603 /* Main Screen */,
 				5A06E38A2B22973F00505603 /* User.swift */,
 				5A06E34D2B21399200505603 /* SettingsViewController.swift */,
 				5A06E39E2B23A46C00505603 /* Add Task Screen */,
 				5A06E3982B23A46C00505603 /* Task View */,
 				5A06E3282B21399100505603 /* Authentication */,
 				5A06E3852B21784000505603 /* Groups Screen */,
-				5A06E3422B21399100505603 /* Tasks Screen */,
 			);
 			path = MobileAppDevFinal;
 			sourceTree = "<group>";
