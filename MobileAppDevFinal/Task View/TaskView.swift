@@ -46,7 +46,7 @@ class TaskView: UIView {
 
     func setupDescription() {
         labelDescription = UILabel()
-        labelDescription.font = UIFont.boldSystemFont(ofSize: 20)
+        labelDescription.font = UIFont.systemFont(ofSize: 15)
         labelDescription.translatesAutoresizingMaskIntoConstraints = false
         contentWrapper.addSubview(labelDescription)
     }
@@ -60,7 +60,7 @@ class TaskView: UIView {
     
     func setupDate() {
         labelDate = UILabel()
-        labelDate.font = UIFont.systemFont(ofSize: 15)
+        labelDate.font = UIFont.boldSystemFont(ofSize: 20)
         labelDate.translatesAutoresizingMaskIntoConstraints = false
         contentWrapper.addSubview(labelDate)
     }
