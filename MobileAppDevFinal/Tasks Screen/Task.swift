@@ -15,20 +15,24 @@ struct Task: Codable{
     var description: String
     var date: Timestamp
     var group: String
+    var photoURL: String
     
-    init(title: String, description: String, date: Timestamp, group: String) {
+    init(title: String, description: String, date: Timestamp, group: String, photoURL: String) {
         self.title = title
         self.description = description
         self.date = date
         self.group = group
+        self.photoURL = photoURL
     }
     
-    init(id: String, title: String, description: String, date: Timestamp, group: String) {
+    
+    init(id: String, title: String, description: String, date: Timestamp, group: String, photoURL: String) {
         self.id = id
         self.title = title
         self.description = description
         self.date = date
         self.group = group
+        self.photoURL = photoURL
     }
     
     enum CodingKeys: String, CodingKey {
@@ -37,6 +41,7 @@ struct Task: Codable{
         case description
         case date
         case group
+        case photoURL
     }
     
 }
