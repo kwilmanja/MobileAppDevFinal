@@ -15,12 +15,11 @@ import CryptoKit
 
 extension AddTaskViewController{
     
-    func generateUUID(title: String, email: String) -> String{
-        let joined = title + email
+    func generateUUID(task: Task) -> String{
+        let joined = task.title + task.group + task.description
         let joinedData = Data(joined.utf8)
         let hashed = Insecure.MD5.hash(data: joinedData)
         return hashed.compactMap{String(format: "%02x", $0)}.joined()
-        
     }
     
     
@@ -32,47 +31,43 @@ extension AddTaskViewController{
         if let title = addTaskScreen.textFieldTitle.text,
             let group = selectedGroup {
                         
+            
             let task = Task(
                 title: title,
                 description: addTaskScreen.textFieldDescription.text ?? "",
                 date: Timestamp(date: addTaskScreen.datePicker.date),
-                group: group.name
+                group: group.name,
+                photoURL: ""
             )
-            
             
             print("sending \(task.title)")
             
+            var taskId : String
+            
             if let t = self.task{
-                do {
-                    try database.collection("groups")
-                        .document(group.id!)
-                        .collection("tasks")
-                        .document(t.id!).setData(from: task)
-                    print("success!")
-                    self.navigationController?.popViewController(animated: true)
-                } catch let error {
-                    print("Error sending text: \(error)")
-                }
+                taskId = t.id!
             } else{
-                do {
-                    try database.collection("groups")
-                        .document(group.id!)
-                        .collection("tasks")
-                        .document().setData(from: task)
-                    print("success!")
-                    self.navigationController?.popViewController(animated: true)
-                    self.navigationController?.popViewController(animated: true)
-
-                    
-                } catch let error {
-                    print("Error sending text: \(error)")
-                }
+                taskId = generateUUID(task: task)
+            }
+            
+            do{
+                try database.collection("groups")
+                    .document(group.id!)
+                    .collection("tasks")
+                    .document(taskId).setData(from: task)
+                print("success!")
+                
+                self.uploadTaskPhotoToStorage(taskId: taskId, group: group)
+                
+            } catch let error {
+                print("Error sending text: \(error)")
             }
             
 
         }
         
     }
+
     
     
 }

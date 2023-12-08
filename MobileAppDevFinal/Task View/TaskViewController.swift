@@ -21,6 +21,7 @@ class TaskViewController: UIViewController {
     
     var groups = [Group]()
     
+    var photo : UIImage?
     
     override func loadView() {
         view = taskScreen
@@ -31,7 +32,7 @@ class TaskViewController: UIViewController {
         self.title = task.title
         
         self.taskScreen.labelGroup.text = "Group: \(task.group)"
-        self.taskScreen.labelDescription.text = "Description: \(task.description)"
+        self.taskScreen.labelDescription.text = task.description
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/y"
         let formattedDate = dateFormatter.string(from: task.date.dateValue())
@@ -40,6 +41,11 @@ class TaskViewController: UIViewController {
         dateFormatter.pmSymbol = "PM"
         let formattedTime = dateFormatter.string(from: task.date.dateValue())
         self.taskScreen.labelDate.text = "\(formattedDate) \(formattedTime)"
+        self.populateTaskPhoto(taskId: task.id!)
+        
+        if(task.photoURL.count > 0){
+            self.taskScreen.taskPic.loadRemoteImage(from: task.photoURL)
+        }
         
         
 //        taskScreen.buttonDone.addTarget(self, action: #selector(onButtonDoneTapped), for: .touchUpInside)

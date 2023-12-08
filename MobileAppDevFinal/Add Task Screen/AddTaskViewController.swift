@@ -7,11 +7,14 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseStorage
 import FirebaseAuth
 import PhotosUI
 
 class AddTaskViewController: UIViewController {
 
+    let storage = Storage.storage()
+    
     var currentUser:FirebaseAuth.User!
     
     let addTaskScreen = AddTaskView()
@@ -47,6 +50,12 @@ class AddTaskViewController: UIViewController {
                     selectedGroup = g
                 }
             }
+            
+            //If we have a photo
+            if(t.photoURL.count > 0){
+                self.loadRemoteImage(from: t.photoURL)
+            }
+            
             
         } else{
             title = "New Task"

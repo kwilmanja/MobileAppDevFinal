@@ -18,19 +18,23 @@
 		5A06E36E2B21399200505603 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E34B2B21399200505603 /* MainScreenView.swift */; };
 		5A06E3702B21399200505603 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E34D2B21399200505603 /* SettingsViewController.swift */; };
 		5A06E3722B213A8900505603 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3712B213A8900505603 /* Task.swift */; };
-		5A06E3742B213C6700505603 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3732B213C6700505603 /* AddTaskViewController.swift */; };
-		5A06E3762B213CA400505603 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3752B213CA400505603 /* AddTaskView.swift */; };
-		5A06E3792B213E3A00505603 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3782B213E3A00505603 /* TaskViewController.swift */; };
-		5A06E37B2B213E4A00505603 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E37A2B213E4A00505603 /* TaskView.swift */; };
 		5A06E37E2B21464100505603 /* GetTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E37D2B21464100505603 /* GetTaskManager.swift */; };
-		5A06E3802B21698D00505603 /* AddTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E37F2B21698D00505603 /* AddTaskManager.swift */; };
 		5A06E3822B216FC200505603 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3812B216FC200505603 /* Group.swift */; };
 		5A06E3842B21724300505603 /* GetGroupsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3832B21724300505603 /* GetGroupsManager.swift */; };
-		5A06E3872B21850900505603 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3862B21850900505603 /* EditTaskViewController.swift */; };
 		5A06E3892B22971100505603 /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3882B22971100505603 /* Configs.swift */; };
 		5A06E38B2B22973F00505603 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38A2B22973F00505603 /* User.swift */; };
 		5A06E38E2B22976300505603 /* ProgressSpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38C2B22976300505603 /* ProgressSpinnerDelegate.swift */; };
 		5A06E38F2B22976300505603 /* ProgressSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38D2B22976300505603 /* ProgressSpinnerViewController.swift */; };
+		5A06E3A42B23A46D00505603 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3992B23A46C00505603 /* EditTaskViewController.swift */; };
+		5A06E3A52B23A46D00505603 /* LoadPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */; };
+		5A06E3A62B23A46D00505603 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39B2B23A46C00505603 /* TaskView.swift */; };
+		5A06E3A72B23A46D00505603 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39C2B23A46C00505603 /* TaskViewController.swift */; };
+		5A06E3A82B23A46D00505603 /* GetTaskPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39D2B23A46C00505603 /* GetTaskPhotoManager.swift */; };
+		5A06E3A92B23A46D00505603 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39F2B23A46C00505603 /* AddTaskView.swift */; };
+		5A06E3AA2B23A46D00505603 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3A02B23A46C00505603 /* AddTaskViewController.swift */; };
+		5A06E3AB2B23A46D00505603 /* GetPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3A12B23A46C00505603 /* GetPhotoManager.swift */; };
+		5A06E3AC2B23A46D00505603 /* AddTaskPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3A22B23A46C00505603 /* AddTaskPhotoManager.swift */; };
+		5A06E3AD2B23A46D00505603 /* AddTaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3A32B23A46C00505603 /* AddTaskManager.swift */; };
 		5AE6F2E92B0BEA59001C815F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F2E82B0BEA59001C815F /* AppDelegate.swift */; };
 		5AE6F2EB2B0BEA59001C815F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE6F2EA2B0BEA59001C815F /* SceneDelegate.swift */; };
 		5AE6F2F02B0BEA59001C815F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5AE6F2EE2B0BEA59001C815F /* Main.storyboard */; };
@@ -59,19 +63,23 @@
 		5A06E34B2B21399200505603 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		5A06E34D2B21399200505603 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5A06E3712B213A8900505603 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
-		5A06E3732B213C6700505603 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
-		5A06E3752B213CA400505603 /* AddTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
-		5A06E3782B213E3A00505603 /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
-		5A06E37A2B213E4A00505603 /* TaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		5A06E37D2B21464100505603 /* GetTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetTaskManager.swift; sourceTree = "<group>"; };
-		5A06E37F2B21698D00505603 /* AddTaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskManager.swift; sourceTree = "<group>"; };
 		5A06E3812B216FC200505603 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		5A06E3832B21724300505603 /* GetGroupsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGroupsManager.swift; sourceTree = "<group>"; };
-		5A06E3862B21850900505603 /* EditTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		5A06E3882B22971100505603 /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		5A06E38A2B22973F00505603 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A06E38C2B22976300505603 /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerDelegate.swift; sourceTree = "<group>"; };
 		5A06E38D2B22976300505603 /* ProgressSpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerViewController.swift; sourceTree = "<group>"; };
+		5A06E3992B23A46C00505603 /* EditTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
+		5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPhotoManager.swift; sourceTree = "<group>"; };
+		5A06E39B2B23A46C00505603 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
+		5A06E39C2B23A46C00505603 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		5A06E39D2B23A46C00505603 /* GetTaskPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetTaskPhotoManager.swift; sourceTree = "<group>"; };
+		5A06E39F2B23A46C00505603 /* AddTaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskView.swift; sourceTree = "<group>"; };
+		5A06E3A02B23A46C00505603 /* AddTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		5A06E3A12B23A46C00505603 /* GetPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetPhotoManager.swift; sourceTree = "<group>"; };
+		5A06E3A22B23A46C00505603 /* AddTaskPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskPhotoManager.swift; sourceTree = "<group>"; };
+		5A06E3A32B23A46C00505603 /* AddTaskManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTaskManager.swift; sourceTree = "<group>"; };
 		5AE6F2E52B0BEA59001C815F /* MobileAppDevFinal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileAppDevFinal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AE6F2E82B0BEA59001C815F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5AE6F2EA2B0BEA59001C815F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,26 +132,6 @@
 			path = "Tasks Screen";
 			sourceTree = "<group>";
 		};
-		5A06E3772B213CAA00505603 /* Add Task Screen */ = {
-			isa = PBXGroup;
-			children = (
-				5A06E3732B213C6700505603 /* AddTaskViewController.swift */,
-				5A06E3752B213CA400505603 /* AddTaskView.swift */,
-				5A06E37F2B21698D00505603 /* AddTaskManager.swift */,
-			);
-			path = "Add Task Screen";
-			sourceTree = "<group>";
-		};
-		5A06E37C2B213E5000505603 /* Task View */ = {
-			isa = PBXGroup;
-			children = (
-				5A06E3782B213E3A00505603 /* TaskViewController.swift */,
-				5A06E37A2B213E4A00505603 /* TaskView.swift */,
-				5A06E3862B21850900505603 /* EditTaskViewController.swift */,
-			);
-			path = "Task View";
-			sourceTree = "<group>";
-		};
 		5A06E3852B21784000505603 /* Groups Screen */ = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +143,30 @@
 				5A06E3812B216FC200505603 /* Group.swift */,
 			);
 			path = "Groups Screen";
+			sourceTree = "<group>";
+		};
+		5A06E3982B23A46C00505603 /* Task View */ = {
+			isa = PBXGroup;
+			children = (
+				5A06E3992B23A46C00505603 /* EditTaskViewController.swift */,
+				5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */,
+				5A06E39B2B23A46C00505603 /* TaskView.swift */,
+				5A06E39C2B23A46C00505603 /* TaskViewController.swift */,
+				5A06E39D2B23A46C00505603 /* GetTaskPhotoManager.swift */,
+			);
+			path = "Task View";
+			sourceTree = "<group>";
+		};
+		5A06E39E2B23A46C00505603 /* Add Task Screen */ = {
+			isa = PBXGroup;
+			children = (
+				5A06E39F2B23A46C00505603 /* AddTaskView.swift */,
+				5A06E3A02B23A46C00505603 /* AddTaskViewController.swift */,
+				5A06E3A12B23A46C00505603 /* GetPhotoManager.swift */,
+				5A06E3A22B23A46C00505603 /* AddTaskPhotoManager.swift */,
+				5A06E3A32B23A46C00505603 /* AddTaskManager.swift */,
+			);
+			path = "Add Task Screen";
 			sourceTree = "<group>";
 		};
 		5AE6F2DC2B0BEA58001C815F = {
@@ -190,11 +202,11 @@
 				5A06E3882B22971100505603 /* Configs.swift */,
 				5A06E38A2B22973F00505603 /* User.swift */,
 				5A06E34D2B21399200505603 /* SettingsViewController.swift */,
+				5A06E39E2B23A46C00505603 /* Add Task Screen */,
+				5A06E3982B23A46C00505603 /* Task View */,
 				5A06E3282B21399100505603 /* Authentication */,
 				5A06E3852B21784000505603 /* Groups Screen */,
 				5A06E3422B21399100505603 /* Tasks Screen */,
-				5A06E3772B213CAA00505603 /* Add Task Screen */,
-				5A06E37C2B213E5000505603 /* Task View */,
 			);
 			path = MobileAppDevFinal;
 			sourceTree = "<group>";
@@ -280,36 +292,40 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A06E3A62B23A46D00505603 /* TaskView.swift in Sources */,
+				5A06E3A72B23A46D00505603 /* TaskViewController.swift in Sources */,
 				5A06E3502B21399200505603 /* SignInManager.swift in Sources */,
 				5A06E3562B21399200505603 /* TaskTableViewCell.swift in Sources */,
 				5A06E3692B21399200505603 /* TaskTableViewManager.swift in Sources */,
 				5AE6F2E92B0BEA59001C815F /* AppDelegate.swift in Sources */,
-				5A06E3762B213CA400505603 /* AddTaskView.swift in Sources */,
 				5A06E3842B21724300505603 /* GetGroupsManager.swift in Sources */,
-				5A06E37B2B213E4A00505603 /* TaskView.swift in Sources */,
 				DF89F4282B22E52C00D26E2D /* GroupTableViewCell.swift in Sources */,
 				5A06E3822B216FC200505603 /* Group.swift in Sources */,
 				5A06E36E2B21399200505603 /* MainScreenView.swift in Sources */,
+				5A06E3AD2B23A46D00505603 /* AddTaskManager.swift in Sources */,
+				5A06E3A52B23A46D00505603 /* LoadPhotoManager.swift in Sources */,
 				5A06E34F2B21399200505603 /* TabBarController.swift in Sources */,
 				DF89F42C2B22E6C000D26E2D /* GroupTableViewManager.swift in Sources */,
 				5A06E3552B21399200505603 /* SettingsView.swift in Sources */,
 				5A06E37E2B21464100505603 /* GetTaskManager.swift in Sources */,
-				5A06E3742B213C6700505603 /* AddTaskViewController.swift in Sources */,
 				5A06E3892B22971100505603 /* Configs.swift in Sources */,
+				5A06E3AC2B23A46D00505603 /* AddTaskPhotoManager.swift in Sources */,
 				5A06E3702B21399200505603 /* SettingsViewController.swift in Sources */,
 				DF89F42A2B22E68200D26E2D /* GroupsScreenView.swift in Sources */,
 				5A06E38E2B22976300505603 /* ProgressSpinnerDelegate.swift in Sources */,
-				5A06E3872B21850900505603 /* EditTaskViewController.swift in Sources */,
 				5A06E3722B213A8900505603 /* Task.swift in Sources */,
+				5A06E3AA2B23A46D00505603 /* AddTaskViewController.swift in Sources */,
+				5A06E3AB2B23A46D00505603 /* GetPhotoManager.swift in Sources */,
+				5A06E3A42B23A46D00505603 /* EditTaskViewController.swift in Sources */,
+				5A06E3A92B23A46D00505603 /* AddTaskView.swift in Sources */,
 				DF89F4242B22E4D800D26E2D /* GroupsViewController.swift in Sources */,
 				5AE6F2EB2B0BEA59001C815F /* SceneDelegate.swift in Sources */,
 				5A06E38F2B22976300505603 /* ProgressSpinnerViewController.swift in Sources */,
 				5A06E3662B21399200505603 /* ViewController.swift in Sources */,
-				5A06E3792B213E3A00505603 /* TaskViewController.swift in Sources */,
 				5A06E38B2B22973F00505603 /* User.swift in Sources */,
+				5A06E3A82B23A46D00505603 /* GetTaskPhotoManager.swift in Sources */,
 				5A06E34E2B21399200505603 /* RegisterManager.swift in Sources */,
 				5A06E3642B21399200505603 /* RightBarButtonManager.swift in Sources */,
-				5A06E3802B21698D00505603 /* AddTaskManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
