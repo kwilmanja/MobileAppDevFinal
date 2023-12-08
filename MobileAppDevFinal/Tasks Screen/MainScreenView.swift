@@ -10,7 +10,7 @@ import UIKit
 class MainScreenView: UIView {
     var profilePic: UIImageView!
     var labelText: UILabel!
-    var tableViewContacts: UITableView!
+    var tableViewTasks: UITableView!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,7 +18,7 @@ class MainScreenView: UIView {
         
         setupProfilePic()
         setupLabelText()
-        setupTableViewContacts()
+        setupTableViewTasks()
         initConstraints()
     }
     
@@ -40,11 +40,11 @@ class MainScreenView: UIView {
         self.addSubview(labelText)
     }
     
-    func setupTableViewContacts(){
-        tableViewContacts = UITableView()
-        tableViewContacts.register(TaskTableViewCell.self, forCellReuseIdentifier: Configs.tableViewTasksID)
-        tableViewContacts.translatesAutoresizingMaskIntoConstraints = false
-        self.addSubview(tableViewContacts)
+    func setupTableViewTasks(){
+        tableViewTasks = UITableView()
+        tableViewTasks.register(TaskTableViewCell.self, forCellReuseIdentifier: Configs.tableViewTasksID)
+        tableViewTasks.translatesAutoresizingMaskIntoConstraints = false
+        self.addSubview(tableViewTasks)
     }
     
     
@@ -60,10 +60,10 @@ class MainScreenView: UIView {
             labelText.bottomAnchor.constraint(equalTo: profilePic.bottomAnchor),
             labelText.leadingAnchor.constraint(equalTo: profilePic.trailingAnchor, constant: 8),
             
-            tableViewContacts.topAnchor.constraint(equalTo: profilePic.bottomAnchor, constant: 8),
-            tableViewContacts.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8),
-            tableViewContacts.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
-            tableViewContacts.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16)
+            tableViewTasks.topAnchor.constraint(equalTo: profilePic.bottomAnchor, constant: 8),
+            tableViewTasks.bottomAnchor.constraint(equalTo: self.safeAreaLayoutGuide.bottomAnchor, constant: -8),
+            tableViewTasks.leadingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.leadingAnchor, constant: 16),
+            tableViewTasks.trailingAnchor.constraint(equalTo: self.safeAreaLayoutGuide.trailingAnchor, constant: -16)
         ])
     }
     

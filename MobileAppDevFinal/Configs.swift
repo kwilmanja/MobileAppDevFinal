@@ -7,6 +7,6 @@
 
 import Foundation
 class Configs{
-//    static let tableViewUsersID = "tableViewUsersID"
+    static let tableViewGroupsID = "tableViewGroupsID"
     static let tableViewTasksID = "tableViewTasksID"
 }

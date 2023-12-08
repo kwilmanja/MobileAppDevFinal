@@ -9,15 +9,10 @@ import UIKit
 
 class SettingsView: UIView {
 
-
     var contentWrapper:UIScrollView!
     var labelName: UILabel!
     var labelEmail: UILabel!
     var buttonLogout: UIButton!
-
-
-
-
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -32,7 +27,6 @@ class SettingsView: UIView {
         setupLabelName()
         setupLabelEmail()
         setupButtonLogout()
-
 
         initConstraints()
     }
@@ -67,8 +61,6 @@ class SettingsView: UIView {
         buttonLogout.translatesAutoresizingMaskIntoConstraints = false
         contentWrapper.addSubview(buttonLogout)
     }
-
-
 
 
     //MARK: initializing constraints...

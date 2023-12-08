@@ -37,7 +37,7 @@ class ViewController: UIViewController {
             if user == nil{
                 //MARK: Reset tableView...
                 self.tasksList.removeAll()
-                self.mainScreen.tableViewContacts.reloadData()
+                self.mainScreen.tableViewTasks.reloadData()
                 
             }else{
                 //MARK: the user is signed in...
@@ -46,8 +46,7 @@ class ViewController: UIViewController {
                 
                 //MARK: Observe Firestore database to display the tasks list...
                 self.populateGroups()
-                self.populate()
-                
+                self.populateTasks()
             }
         }
     }
@@ -58,11 +57,11 @@ class ViewController: UIViewController {
         title = "Tasks"
         
         //MARK: patching table view delegate and data source...
-        mainScreen.tableViewContacts.delegate = self
-        mainScreen.tableViewContacts.dataSource = self
+        mainScreen.tableViewTasks.delegate = self
+        mainScreen.tableViewTasks.dataSource = self
         
         //MARK: removing the separator line...
-        mainScreen.tableViewContacts.separatorStyle = .none
+        mainScreen.tableViewTasks.separatorStyle = .none
         
         
         let barText = UIBarButtonItem(title: "Add Task", style: .plain, target: self, action: #selector(addTask))

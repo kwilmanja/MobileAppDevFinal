@@ -8,10 +8,9 @@
 import Foundation
 import FirebaseFirestore
 
-extension ViewController{
+extension GroupsViewController {
     
     func populateGroups(){
-        
         self.database.collection("users")
             .document((self.currentUser?.email)!)
             .collection("groups").getDocuments() { (querySnapshot, err) in
@@ -31,7 +30,6 @@ extension ViewController{
     }
     
     
-    
     func getGroups(groupIds: [String]) {
         self.database.collection("groups")
             .whereField(FieldPath.documentID(), in: groupIds)
@@ -39,16 +37,17 @@ extension ViewController{
                 if let err = err {
                   print("Error getting documents: \(err)")
                 } else {
+                    self.groupsList.removeAll()
                     
-                  for document in querySnapshot!.documents {
+                    for document in querySnapshot!.documents {
                       do{
                           let g  = try document.data(as: Group.self)
-                          self.groups.append(g)
-                          print(g.name)
+                          self.groupsList.append(g)
                       }catch{
                           print(error)
                       }
-                  }
+                    }
+                    self.groupScreen.tableViewGroups.reloadData()
                 }
             }
     }
