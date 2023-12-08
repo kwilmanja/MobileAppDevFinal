@@ -12,6 +12,8 @@ import FirebaseFirestore
 extension ViewController {
     
     func populateGroups(){
+        self.groups.removeAll()
+        
         self.database.collection("users")
             .document((self.currentUser?.email)!)
             .collection("groups").getDocuments() { (querySnapshot, err) in

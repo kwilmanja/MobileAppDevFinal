@@ -97,8 +97,8 @@ class TaskView: UIView {
             
             taskPic.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 16),
             taskPic.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
-            taskPic.heightAnchor.constraint(equalTo: contentWrapper.heightAnchor, constant: -50),
-            taskPic.widthAnchor.constraint(equalTo: contentWrapper.heightAnchor, constant: -50)
+            taskPic.heightAnchor.constraint(equalToConstant: 500),
+            taskPic.widthAnchor.constraint(equalToConstant: 300)
             
             
         ])
