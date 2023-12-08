@@ -27,8 +27,8 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
         dateFormatter.pmSymbol = "PM"
         let formattedTime = dateFormatter.string(from: t.date.dateValue())
 
-        cell.name.text = t.title
-        cell.email.text = "\(formattedDate) - \(formattedTime)"
+        cell.title.text = "\(t.title) (\(t.group))"
+        cell.dueDate.text = "\(formattedDate) - \(formattedTime)"
         return cell
     }
     

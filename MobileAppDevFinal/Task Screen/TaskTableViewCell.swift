@@ -10,15 +10,15 @@ import UIKit
 class TaskTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
-    var name: UILabel!
-    var email: UILabel!
+    var title: UILabel!
+    var dueDate: UILabel!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         setupWrapperCellView()
-        setupName()
-        setupEmail()
+        setupTitle()
+        setupDueDate()
         
         initConstraints()
     }
@@ -37,18 +37,18 @@ class TaskTableViewCell: UITableViewCell {
         self.addSubview(wrapperCellView)
     }
     
-    func setupName() {
-        name = UILabel()
-        name.font = UIFont.boldSystemFont(ofSize: 20)
-        name.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(name)
+    func setupTitle() {
+        title = UILabel()
+        title.font = UIFont.boldSystemFont(ofSize: 20)
+        title.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(title)
     }
     
-    func setupEmail() {
-        email = UILabel()
-        email.font = UIFont.systemFont(ofSize: 15)
-        email.translatesAutoresizingMaskIntoConstraints = false
-        wrapperCellView.addSubview(email)
+    func setupDueDate() {
+        dueDate = UILabel()
+        dueDate.font = UIFont.systemFont(ofSize: 15)
+        dueDate.translatesAutoresizingMaskIntoConstraints = false
+        wrapperCellView.addSubview(dueDate)
     }
     
     
@@ -59,15 +59,15 @@ class TaskTableViewCell: UITableViewCell {
             wrapperCellView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -10),
             wrapperCellView.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10),
             
-            name.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 5),
-            name.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
-            name.heightAnchor.constraint(equalToConstant: 20),
-            name.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
+            title.topAnchor.constraint(equalTo: wrapperCellView.topAnchor, constant: 5),
+            title.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
+            title.heightAnchor.constraint(equalToConstant: 20),
+            title.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
             
-            email.topAnchor.constraint(equalTo: name.bottomAnchor, constant: 5),
-            email.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
-            email.heightAnchor.constraint(equalToConstant: 15),
-            email.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
+            dueDate.topAnchor.constraint(equalTo: title.bottomAnchor, constant: 5),
+            dueDate.leadingAnchor.constraint(equalTo: wrapperCellView.leadingAnchor, constant: 16),
+            dueDate.heightAnchor.constraint(equalToConstant: 15),
+            dueDate.widthAnchor.constraint(lessThanOrEqualTo: wrapperCellView.widthAnchor),
             
             wrapperCellView.heightAnchor.constraint(equalToConstant: 50)
         ])
