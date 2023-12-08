@@ -13,7 +13,7 @@ extension ViewController{
     
     func populate(){
         
-        self.contactsList.removeAll()
+        self.tasksList.removeAll()
         
         self.database.collection("users")
             .document((self.currentUser?.email)!)
@@ -47,13 +47,13 @@ extension ViewController{
                       for document in querySnapshot!.documents {
                               do{
                                   let task  = try document.data(as: Task.self)
-                                  self.contactsList.append(task)
+                                  self.tasksList.append(task)
                                   print(task.title)
                               }catch{
                                   print(error)
                               }
                           }
-                        self.contactsList.sort(by: { $0.date.seconds < $1.date.seconds})
+                        self.tasksList.sort(by: { $0.date.seconds < $1.date.seconds})
                         self.mainScreen.tableViewContacts.reloadData()
                     }
                   }

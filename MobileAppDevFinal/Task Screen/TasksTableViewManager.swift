@@ -10,13 +10,13 @@ import UIKit
 
 extension ViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return contactsList.count
+        return tasksList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Configs.tableViewContactsID, for: indexPath) as! UserTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: Configs.tableViewTasksID, for: indexPath) as! TaskTableViewCell
         
-        let t = contactsList[indexPath.row]
+        let t = tasksList[indexPath.row]
                 
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/y"
@@ -34,7 +34,7 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = self.contactsList[indexPath.row]
+        let task = self.tasksList[indexPath.row]
         let taskViewController = TaskViewController()
         taskViewController.task = task
         taskViewController.currentUser = self.currentUser

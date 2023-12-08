@@ -13,7 +13,7 @@ class ViewController: UIViewController {
 
     let mainScreen = MainScreenView()
         
-    var contactsList = [Task]()
+    var tasksList = [Task]()
     
     var handleAuth: AuthStateDidChangeListenerHandle?
     
@@ -29,27 +29,20 @@ class ViewController: UIViewController {
         view = mainScreen
     }
     
-    
-    
-    
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         //MARK: handling if the Authentication state is changed (sign in, sign out, register)...
         handleAuth = Auth.auth().addStateDidChangeListener{ auth, user in
             if user == nil{
-                
-            
-                
                 //MARK: Reset tableView...
-                self.contactsList.removeAll()
+                self.tasksList.removeAll()
                 self.mainScreen.tableViewContacts.reloadData()
                 
             }else{
                 //MARK: the user is signed in...
                 self.currentUser = user
-                self.mainScreen.labelText.text = "Welcome \(user?.displayName ?? "Anonymous")!"
+                self.mainScreen.labelText.text = "Welcome \(user?.displayName ?? "Anonymous")!" // TODO delete
                 
                 //MARK: Observe Firestore database to display the tasks list...
                 self.populateGroups()

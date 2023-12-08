@@ -16,8 +16,6 @@ class TabBarController: UITabBarController {
     
     let database = Firestore.firestore()
 
-    
-
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -36,9 +34,6 @@ class TabBarController: UITabBarController {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        Auth.auth().removeStateDidChangeListener(handleAuth!)
+//        Auth.auth().removeStateDidChangeListener(handleAuth!)
     }
-
-
-    
 }

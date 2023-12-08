@@ -11,10 +11,10 @@
 		5A06E34F2B21399200505603 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E32A2B21399100505603 /* TabBarController.swift */; };
 		5A06E3502B21399200505603 /* SignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E32B2B21399100505603 /* SignInManager.swift */; };
 		5A06E3552B21399200505603 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3302B21399100505603 /* SettingsView.swift */; };
-		5A06E3562B21399200505603 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3312B21399100505603 /* UserTableViewCell.swift */; };
+		5A06E3562B21399200505603 /* TaskTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3312B21399100505603 /* TaskTableViewCell.swift */; };
 		5A06E3642B21399200505603 /* RightBarButtonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3402B21399100505603 /* RightBarButtonManager.swift */; };
 		5A06E3662B21399200505603 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3432B21399100505603 /* ViewController.swift */; };
-		5A06E3692B21399200505603 /* ContactsTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3462B21399200505603 /* ContactsTableViewManager.swift */; };
+		5A06E3692B21399200505603 /* TasksTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3462B21399200505603 /* TasksTableViewManager.swift */; };
 		5A06E36E2B21399200505603 /* MainScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E34B2B21399200505603 /* MainScreenView.swift */; };
 		5A06E3702B21399200505603 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E34D2B21399200505603 /* SettingsViewController.swift */; };
 		5A06E3722B213A8900505603 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3712B213A8900505603 /* Task.swift */; };
@@ -48,10 +48,10 @@
 		5A06E32A2B21399100505603 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		5A06E32B2B21399100505603 /* SignInManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInManager.swift; sourceTree = "<group>"; };
 		5A06E3302B21399100505603 /* SettingsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
-		5A06E3312B21399100505603 /* UserTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
+		5A06E3312B21399100505603 /* TaskTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskTableViewCell.swift; sourceTree = "<group>"; };
 		5A06E3402B21399100505603 /* RightBarButtonManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightBarButtonManager.swift; sourceTree = "<group>"; };
 		5A06E3432B21399100505603 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		5A06E3462B21399200505603 /* ContactsTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsTableViewManager.swift; sourceTree = "<group>"; };
+		5A06E3462B21399200505603 /* TasksTableViewManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TasksTableViewManager.swift; sourceTree = "<group>"; };
 		5A06E34B2B21399200505603 /* MainScreenView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenView.swift; sourceTree = "<group>"; };
 		5A06E34D2B21399200505603 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		5A06E3712B213A8900505603 /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
@@ -107,8 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				5A06E3712B213A8900505603 /* Task.swift */,
-				5A06E3312B21399100505603 /* UserTableViewCell.swift */,
-				5A06E3462B21399200505603 /* ContactsTableViewManager.swift */,
+				5A06E3312B21399100505603 /* TaskTableViewCell.swift */,
+				5A06E3462B21399200505603 /* TasksTableViewManager.swift */,
 				5A06E34B2B21399200505603 /* MainScreenView.swift */,
 				5A06E3432B21399100505603 /* ViewController.swift */,
 				5A06E37D2B21464100505603 /* GetTaskManager.swift */,
@@ -269,8 +269,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A06E3502B21399200505603 /* SignInManager.swift in Sources */,
-				5A06E3562B21399200505603 /* UserTableViewCell.swift in Sources */,
-				5A06E3692B21399200505603 /* ContactsTableViewManager.swift in Sources */,
+				5A06E3562B21399200505603 /* TaskTableViewCell.swift in Sources */,
+				5A06E3692B21399200505603 /* TasksTableViewManager.swift in Sources */,
 				5AE6F2E92B0BEA59001C815F /* AppDelegate.swift in Sources */,
 				5A06E3762B213CA400505603 /* AddTaskView.swift in Sources */,
 				5A06E3842B21724300505603 /* GetGroupsManager.swift in Sources */,

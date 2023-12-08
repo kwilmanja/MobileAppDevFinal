@@ -7,7 +7,7 @@
 
 import UIKit
 
-class UserTableViewCell: UITableViewCell {
+class TaskTableViewCell: UITableViewCell {
     
     var wrapperCellView: UIView!
     var name: UILabel!

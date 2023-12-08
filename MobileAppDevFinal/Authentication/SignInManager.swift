@@ -9,8 +9,7 @@ import Foundation
 import UIKit
 import FirebaseAuth
 
-extension TabBarController{
-    
+extension TabBarController {
     
     @objc func signInAlert(msg: String){
         let signInAlert = UIAlertController(
@@ -83,6 +82,4 @@ extension TabBarController{
         
         return emailPred.evaluate(with: email)
     }
-
-    
 }
