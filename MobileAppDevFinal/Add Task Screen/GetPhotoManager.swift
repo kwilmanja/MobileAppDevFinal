@@ -18,7 +18,10 @@ extension AddTaskViewController{
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
-                        self!.addTaskScreen.buttonPhoto.setImage(image, for: .normal)
+                        self!.addTaskScreen.buttonPhoto.setImage(
+                            image.withRenderingMode(.alwaysOriginal),
+                            for: .normal
+                        )
                     }
                 }
             }

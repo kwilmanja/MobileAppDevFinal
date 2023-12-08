@@ -74,7 +74,6 @@ class AddTaskViewController: UIViewController {
         addTaskScreen.buttonPhoto.menu = getMenuImage()
         
         
-        
         let saveButton = UIBarButtonItem(title: "Save", style: .plain, target: self, action: #selector(saveTask))
         navigationItem.rightBarButtonItem = saveButton
         
@@ -176,6 +175,7 @@ extension AddTaskViewController: UINavigationControllerDelegate, UIImagePickerCo
                 image.withRenderingMode(.alwaysOriginal),
                 for: .normal
             )
+            
             self.pickedImage = image
         }else{
             // Do your thing for No image loaded...

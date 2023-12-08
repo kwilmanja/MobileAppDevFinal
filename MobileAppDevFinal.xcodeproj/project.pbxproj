@@ -25,7 +25,6 @@
 		5A06E38B2B22973F00505603 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38A2B22973F00505603 /* User.swift */; };
 		5A06E38E2B22976300505603 /* ProgressSpinnerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38C2B22976300505603 /* ProgressSpinnerDelegate.swift */; };
 		5A06E38F2B22976300505603 /* ProgressSpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E38D2B22976300505603 /* ProgressSpinnerViewController.swift */; };
-		5A06E3A42B23A46D00505603 /* EditTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E3992B23A46C00505603 /* EditTaskViewController.swift */; };
 		5A06E3A52B23A46D00505603 /* LoadPhotoManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */; };
 		5A06E3A62B23A46D00505603 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39B2B23A46C00505603 /* TaskView.swift */; };
 		5A06E3A72B23A46D00505603 /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06E39C2B23A46C00505603 /* TaskViewController.swift */; };
@@ -70,7 +69,6 @@
 		5A06E38A2B22973F00505603 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		5A06E38C2B22976300505603 /* ProgressSpinnerDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerDelegate.swift; sourceTree = "<group>"; };
 		5A06E38D2B22976300505603 /* ProgressSpinnerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressSpinnerViewController.swift; sourceTree = "<group>"; };
-		5A06E3992B23A46C00505603 /* EditTaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditTaskViewController.swift; sourceTree = "<group>"; };
 		5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadPhotoManager.swift; sourceTree = "<group>"; };
 		5A06E39B2B23A46C00505603 /* TaskView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskView.swift; sourceTree = "<group>"; };
 		5A06E39C2B23A46C00505603 /* TaskViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
@@ -135,7 +133,6 @@
 		5A06E3982B23A46C00505603 /* Task View */ = {
 			isa = PBXGroup;
 			children = (
-				5A06E3992B23A46C00505603 /* EditTaskViewController.swift */,
 				5A06E39A2B23A46C00505603 /* LoadPhotoManager.swift */,
 				5A06E39B2B23A46C00505603 /* TaskView.swift */,
 				5A06E39C2B23A46C00505603 /* TaskViewController.swift */,
@@ -316,7 +313,6 @@
 				5A06E3722B213A8900505603 /* Task.swift in Sources */,
 				5A06E3AA2B23A46D00505603 /* AddTaskViewController.swift in Sources */,
 				5A06E3AB2B23A46D00505603 /* GetPhotoManager.swift in Sources */,
-				5A06E3A42B23A46D00505603 /* EditTaskViewController.swift in Sources */,
 				5A06E3A92B23A46D00505603 /* AddTaskView.swift in Sources */,
 				DF89F4242B22E4D800D26E2D /* GroupsViewController.swift in Sources */,
 				5AE6F2EB2B0BEA59001C815F /* SceneDelegate.swift in Sources */,

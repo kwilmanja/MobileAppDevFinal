@@ -64,10 +64,29 @@ extension AddTaskViewController{
             }
             
 
+        } else{
+            
+            self.alertAddTaskInputs()
         }
         
     }
 
+    @objc func alertAddTaskInputs(){
+        let signInAlert = UIAlertController(
+            title: "Invalid Input",
+            message: "Title and Group must be populated",
+            preferredStyle: .alert)
+
+        let okAction = UIAlertAction(title: "OK", style: .default)
+
+                // Add the action to the alert controller
+        signInAlert.addAction(okAction)
+        
+        self.present(signInAlert, animated: true, completion: {() in
+            //MARK: hide the alerton tap outside...
+            signInAlert.view.superview?.isUserInteractionEnabled = true
+        })
+    }
     
     
 }
