@@ -24,7 +24,7 @@ extension GroupsViewController: UITableViewDelegate, UITableViewDataSource{
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let task = self.groupsList[indexPath.row]
+        let group = self.groupsList[indexPath.row]
         
 //        TODO ADD GroupViewController
 //        let taskViewController = TaskViewController()

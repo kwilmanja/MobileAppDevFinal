@@ -36,13 +36,5 @@ extension AddGroupViewController {
     
     func addGroupToUser(email:String, id:String) {
         self.database.collection("users").document(email).collection("groups").document(id).setData([:])
-        
-//        self.database.collection("users").document(email).collection("groups").document(id).setData([:], completion: { error in
-//            if error == nil {
-//                self.navigationController?.popViewController(animated: true)
-//            } else {
-//                print("Error in saving new group to a user")
-//            }
-//        })
     }
 }
