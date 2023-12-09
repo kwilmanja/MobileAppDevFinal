@@ -12,6 +12,7 @@ import FirebaseFirestore
 extension ViewController {
     
     func populateGroups(){
+        
         self.groups.removeAll()
         
         self.database.collection("users")
@@ -20,14 +21,18 @@ extension ViewController {
                 if let err = err {
                   print("Error getting documents: \(err)")
                 } else {
-                    var groups = [String]()
+                    var groupIds = [String]()
                     
-                    for document in querySnapshot!.documents {
-                    groups.append(document.documentID)
-                    print("\(document.documentID)")
+                    if(!querySnapshot!.documents.isEmpty){
+                        for document in querySnapshot!.documents {
+                            groupIds.append(document.documentID)
+                            print("\(document.documentID)")
+                        }
+                        
+                        self.getGroups(groupIds: groupIds)
+
+                        
                     }
-                    
-                    self.getGroups(groupIds: groups)
                 }
             }
     }
@@ -63,12 +68,19 @@ extension ViewController {
                   print("Error getting documents: \(err)")
                 } else {
                     var groups = [String]()
-                  for document in querySnapshot!.documents {
-                    groups.append(document.documentID)
-                    print("\(document.documentID)")
-                  }
                     
-                    self.getTasks(groupIds: groups)
+                    if(!querySnapshot!.documents.isEmpty){
+
+                      for document in querySnapshot!.documents {
+                        groups.append(document.documentID)
+                        print("\(document.documentID)")
+                      }
+                    }
+                    
+                    if(!groups.isEmpty){
+                        self.getTasks(groupIds: groups)
+                    }
+                    
                 }
               }
         

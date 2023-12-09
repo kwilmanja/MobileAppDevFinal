@@ -36,7 +36,7 @@ class SettingsViewController: UIViewController {
                 
             }else{
                 //MARK: the user is signed in...
-                self.settingsScreen.labelName.text = user!.displayName!
+                self.settingsScreen.labelName.text = user!.displayName ?? ""
                 self.settingsScreen.labelEmail.text = user!.email!
             }
         }

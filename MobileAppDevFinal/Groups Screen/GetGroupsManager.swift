@@ -18,12 +18,14 @@ extension GroupsViewController {
                   print("Error getting documents: \(err)")
                 } else {
                     var groups = [String]()
-                    
-                    for document in querySnapshot!.documents {
-                        groups.append(document.documentID)
+                    if(!querySnapshot!.documents.isEmpty){
+                        for document in querySnapshot!.documents {
+                            groups.append(document.documentID)
+                        }
+                        
+                        self.getGroups(groupIds: groups)
                     }
                     
-                    self.getGroups(groupIds: groups)
                 }
             }
     }
