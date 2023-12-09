@@ -48,7 +48,7 @@ class GroupViewController: UIViewController {
                 print("Error removing document: \(err)")
             } else {
                 print("Document successfully removed!")
-                self.navigationController?.popViewController(animated: true)
+                self.deleteGroupFromUser()
             }
         }
     }
@@ -60,5 +60,16 @@ class GroupViewController: UIViewController {
         editGroupController.group = self.group
         
         navigationController?.pushViewController(editGroupController, animated: true)
+    }
+    
+    func deleteGroupFromUser() {
+        database.collection("users").document(currentUser.email!).collection("groups").document(group.id!).delete() { err in
+            if let err = err {
+                print("Error removing document: \(err)")
+            } else {
+                print("Document successfully removed!")
+                self.navigationController?.popViewController(animated: true)
+            }
+        }
     }
 }
