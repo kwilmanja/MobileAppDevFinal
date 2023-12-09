@@ -28,6 +28,8 @@ class GroupViewController: UIViewController {
         self.title = group.name
         updateUsers(group.users)
         
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Edit Group", style: .plain, target: self, action: #selector(editGroup))
+        
         self.groupScreenView.buttonDelete.addTarget(self, action: #selector(deleteGroup), for: .touchUpInside)
     }
 
@@ -49,5 +51,14 @@ class GroupViewController: UIViewController {
                 self.navigationController?.popViewController(animated: true)
             }
         }
+    }
+    
+    @objc func editGroup() {
+        let editGroupController = AddGroupViewController()
+        editGroupController.currentUser = self.currentUser
+        editGroupController.users = self.group.users
+        editGroupController.group = self.group
+        
+        navigationController?.pushViewController(editGroupController, animated: true)
     }
 }

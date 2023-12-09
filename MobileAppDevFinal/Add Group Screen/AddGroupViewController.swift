@@ -16,6 +16,7 @@ class AddGroupViewController: UIViewController {
     
     let addGroupScreen = AddGroupScreen()
     
+    var group: Group?
     var users = [String]()
     
     override func loadView() {
@@ -24,8 +25,15 @@ class AddGroupViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        title = "New Group"
+        
+        if let g = self.group {
+            title = "Edit Group"
+            
+            self.addGroupScreen.name.text = g.name
+            updateUsers()
+        } else {
+            title = "New Group"
+        }
         
         //MARK: recognizing the taps on the app screen, not the keyboard...
         let tapRecognizer = UITapGestureRecognizer(target: self, action: #selector(hideKeyboardOnTap))
@@ -77,5 +85,13 @@ class AddGroupViewController: UIViewController {
         addGroupScreen.users.numberOfLines = users.count + 1
         addGroupScreen.users.text = usersString
         addGroupScreen.addUser.text = ""
+    }
+    
+    func goBackToMainPage(){
+        if let _ = self.group {
+            self.navigationController?.popViewController(animated: true)
+        }
+        
+        self.navigationController?.popViewController(animated: true)
     }
 }

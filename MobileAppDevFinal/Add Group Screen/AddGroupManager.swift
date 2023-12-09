@@ -6,13 +6,21 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 extension AddGroupViewController {
     @objc func saveGroup() {
         if let name = addGroupScreen.name.text {
             do {
+                var ref:DocumentReference
+                if let g = self.group{
+                    ref = self.database.collection("groups").document(g.id!)
+                } else {
+                    ref = self.database.collection("groups").document()
+                }
+                
                 // https://stackoverflow.com/questions/63478433/how-to-get-document-id-after-creation-firestore-ios
-                let ref = self.database.collection("groups").document()
+//                let ref = self.database.collection("groups").document()
                 
                 try ref.setData(from: Group(name: name, users: self.users), completion: { error in
                     if error == nil {
@@ -24,7 +32,7 @@ extension AddGroupViewController {
                             self.addGroupToUser(email: user, id: ref.documentID)
                         }
                         
-                        self.navigationController?.popViewController(animated: true)
+                        self.goBackToMainPage()
                     }
                 })
                 
