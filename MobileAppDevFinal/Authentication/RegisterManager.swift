@@ -11,7 +11,6 @@ import FirebaseAuth
 
 extension TabBarController{
     
-    
     @objc func registerAlert(msg: String){
         let registerAlert = UIAlertController(
             title: "Register",
@@ -75,8 +74,6 @@ extension TabBarController{
             registerAlert.view.superview?.isUserInteractionEnabled = true
         })
     }
-    
-    
     
     func register(email: String, name: String, password: String){
         //MARK: display the progress indicator...

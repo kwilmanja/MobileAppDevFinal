@@ -76,5 +76,6 @@ class AddGroupViewController: UIViewController {
         }
         addGroupScreen.users.numberOfLines = users.count + 1
         addGroupScreen.users.text = usersString
+        addGroupScreen.addUser.text = ""
     }
 }

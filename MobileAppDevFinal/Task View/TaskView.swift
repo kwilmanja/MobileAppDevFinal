@@ -82,9 +82,6 @@ class TaskView: UIView {
         buttonDelete.setTitle("Delete", for: UIControl.State.normal)
         contentWrapper.addSubview(buttonDelete)
     }
-    
-    
-
 
     //MARK: initializing constraints...
     func initConstraints(){

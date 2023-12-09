@@ -51,6 +51,8 @@
 		DF89F4382B23B3C800D26E2D /* AddGroupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4352B23B3C800D26E2D /* AddGroupScreen.swift */; };
 		DF89F4392B23B3C800D26E2D /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4362B23B3C800D26E2D /* AddGroupViewController.swift */; };
 		DF89F43A2B23B3C800D26E2D /* AddGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4372B23B3C800D26E2D /* AddGroupManager.swift */; };
+		DF89F43D2B23FCBA00D26E2D /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F43C2B23FCBA00D26E2D /* GroupViewController.swift */; };
+		DF89F4402B23FCE200D26E2D /* GroupScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F43F2B23FCE200D26E2D /* GroupScreenView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -96,6 +98,8 @@
 		DF89F4352B23B3C800D26E2D /* AddGroupScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupScreen.swift; sourceTree = "<group>"; };
 		DF89F4362B23B3C800D26E2D /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
 		DF89F4372B23B3C800D26E2D /* AddGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupManager.swift; sourceTree = "<group>"; };
+		DF89F43C2B23FCBA00D26E2D /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
+		DF89F43F2B23FCE200D26E2D /* GroupScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupScreenView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +211,7 @@
 				5A06E3982B23A46C00505603 /* Task View */,
 				5A06E3282B21399100505603 /* Authentication */,
 				5A06E3852B21784000505603 /* Groups Screen */,
+				DF89F43E2B23FCBF00D26E2D /* Group View Screen */,
 				DF89F4342B23B3C800D26E2D /* Add Group Screen */,
 				DF89F43B2B23F69000D26E2D /* Data Models */,
 			);
@@ -231,6 +236,15 @@
 				5A06E3712B213A8900505603 /* Task.swift */,
 			);
 			path = "Data Models";
+			sourceTree = "<group>";
+		};
+		DF89F43E2B23FCBF00D26E2D /* Group View Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DF89F43C2B23FCBA00D26E2D /* GroupViewController.swift */,
+				DF89F43F2B23FCE200D26E2D /* GroupScreenView.swift */,
+			);
+			path = "Group View Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -337,6 +351,7 @@
 				DF89F42A2B22E68200D26E2D /* GroupsScreenView.swift in Sources */,
 				DF89F43A2B23B3C800D26E2D /* AddGroupManager.swift in Sources */,
 				5A06E38E2B22976300505603 /* ProgressSpinnerDelegate.swift in Sources */,
+				DF89F43D2B23FCBA00D26E2D /* GroupViewController.swift in Sources */,
 				5A06E3722B213A8900505603 /* Task.swift in Sources */,
 				5A06E3AA2B23A46D00505603 /* AddTaskViewController.swift in Sources */,
 				5A06E3AB2B23A46D00505603 /* GetPhotoManager.swift in Sources */,
@@ -347,6 +362,7 @@
 				DF89F4392B23B3C800D26E2D /* AddGroupViewController.swift in Sources */,
 				5A06E3662B21399200505603 /* ViewController.swift in Sources */,
 				5A06E38B2B22973F00505603 /* User.swift in Sources */,
+				DF89F4402B23FCE200D26E2D /* GroupScreenView.swift in Sources */,
 				5A06E3A82B23A46D00505603 /* GetTaskPhotoManager.swift in Sources */,
 				5A06E34E2B21399200505603 /* RegisterManager.swift in Sources */,
 				5A06E3642B21399200505603 /* RightBarButtonManager.swift in Sources */,
