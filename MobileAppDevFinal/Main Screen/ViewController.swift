@@ -42,7 +42,7 @@ class ViewController: UIViewController {
             }else{
                 //MARK: the user is signed in...
                 self.currentUser = user
-                self.mainScreen.labelText.text = "Welcome \(user?.displayName ?? "Anonymous")!" // TODO delete
+                self.mainScreen.labelText.text = "Welcome \(user?.displayName ?? "New User")!" // TODO delete
                 
                 //MARK: Observe Firestore database to display the tasks list...
                 self.populateGroups()
