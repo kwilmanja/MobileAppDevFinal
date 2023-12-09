@@ -29,7 +29,9 @@ extension AddTaskViewController{
         //selectedGroup
         
         if let title = addTaskScreen.textFieldTitle.text,
-            let group = selectedGroup {
+            let group = selectedGroup,
+           self.addTaskScreen.datePicker.date >= Date()
+        {
                         
             
             let task = Task(
@@ -74,7 +76,7 @@ extension AddTaskViewController{
     @objc func alertAddTaskInputs(){
         let signInAlert = UIAlertController(
             title: "Invalid Input",
-            message: "Title and Group must be populated",
+            message: "Title and Group must be populated and date must not be in the past",
             preferredStyle: .alert)
 
         let okAction = UIAlertAction(title: "OK", style: .default)

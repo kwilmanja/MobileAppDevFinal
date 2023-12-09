@@ -15,6 +15,7 @@ class TaskView: UIView {
     var labelGroup: UILabel!
     var labelDate: UILabel!
     var taskPic: UIImageView!
+    var buttonDelete: UIButton!
 
 
         
@@ -32,6 +33,7 @@ class TaskView: UIView {
         setupGroup()
         setupDate()
         setupImage()
+        setupButtonDelete()
         
         initConstraints()
     }
@@ -74,6 +76,12 @@ class TaskView: UIView {
         contentWrapper.addSubview(taskPic)
     }
     
+    func setupButtonDelete(){
+        buttonDelete = UIButton(type: .system)
+        buttonDelete.translatesAutoresizingMaskIntoConstraints = false
+        buttonDelete.setTitle("Delete", for: UIControl.State.normal)
+        contentWrapper.addSubview(buttonDelete)
+    }
     
     
 
@@ -95,7 +103,10 @@ class TaskView: UIView {
             labelDescription.topAnchor.constraint(equalTo: labelDate.bottomAnchor, constant: 16),
             labelDescription.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
             
-            taskPic.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 16),
+            buttonDelete.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 8),
+            buttonDelete.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
+            
+            taskPic.topAnchor.constraint(equalTo: buttonDelete.bottomAnchor, constant: 8),
             taskPic.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
             taskPic.heightAnchor.constraint(equalToConstant: 500),
             taskPic.widthAnchor.constraint(equalToConstant: 300)

@@ -33,6 +33,7 @@ class TaskViewController: UIViewController {
         
         self.taskScreen.labelGroup.text = "Group: \(task.group)"
         self.taskScreen.labelDescription.text = task.description
+        self.taskScreen.buttonDelete.addTarget(self, action: #selector(deleteTask), for: .touchUpInside)
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "MM/dd/y"
         let formattedDate = dateFormatter.string(from: task.date.dateValue())
@@ -42,6 +43,7 @@ class TaskViewController: UIViewController {
         let formattedTime = dateFormatter.string(from: task.date.dateValue())
         self.taskScreen.labelDate.text = "\(formattedDate) \(formattedTime)"
         self.populateTaskPhoto(taskId: task.id!)
+        
         
         if(task.photoURL.count > 0){
             self.taskScreen.taskPic.loadRemoteImage(from: task.photoURL)
@@ -76,6 +78,26 @@ class TaskViewController: UIViewController {
     @objc func hideKeyboardOnTap(){
         //MARK: removing the keyboard from screen...
         view.endEditing(true)
+    }
+    
+    
+    @objc func deleteTask(){
+        
+        for g in self.groups{
+            if(g.name == task.group){
+                database.collection("groups").document(g.id!)
+                    .collection("tasks").document(task.id!).delete() { err in
+                  if let err = err {
+                    print("Error removing document: \(err)")
+                  } else {
+                    print("Document successfully removed!")
+                    self.navigationController?.popViewController(animated: true)
+                  }
+                }
+            }
+        }
+        
+        
     }
     
 

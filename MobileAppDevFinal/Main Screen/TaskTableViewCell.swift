@@ -12,6 +12,7 @@ class TaskTableViewCell: UITableViewCell {
     var wrapperCellView: UIView!
     var title: UILabel!
     var dueDate: UILabel!
+    var buttonDelete: UIButton!
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?){
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -50,6 +51,7 @@ class TaskTableViewCell: UITableViewCell {
         dueDate.translatesAutoresizingMaskIntoConstraints = false
         wrapperCellView.addSubview(dueDate)
     }
+    
     
     
     func initConstraints() {
