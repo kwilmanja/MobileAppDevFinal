@@ -32,14 +32,21 @@ extension AddTaskViewController{
             let group = selectedGroup,
            self.addTaskScreen.datePicker.date >= Date()
         {
-                        
+                       
+            var oldPhotoId : String
+            
+            if let t = self.task{
+                oldPhotoId = t.photoURL
+            } else{
+                oldPhotoId = ""
+            }
             
             let task = Task(
                 title: title,
                 description: addTaskScreen.textFieldDescription.text ?? "",
                 date: Timestamp(date: addTaskScreen.datePicker.date),
                 group: group.name,
-                photoURL: ""
+                photoURL: oldPhotoId
             )
             
             print("sending \(task.title)")
