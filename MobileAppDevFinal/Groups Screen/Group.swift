@@ -12,20 +12,24 @@ import Firebase
 struct Group: Codable{
     @DocumentID var id: String?
     var name: String
+    var users: [String]
     
-    init(name: String) {
+    init(name: String, users:[String]) {
         self.name = name
+        self.users = users
     }
     
-    init(id: String, name: String) {
+    init(id: String, name: String, users:[String]) {
         self.id = id
         self.name = name
+        self.users = users
     }
     
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
+        case users
     }
     
 }

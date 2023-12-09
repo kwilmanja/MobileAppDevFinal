@@ -48,6 +48,9 @@
 		DF89F4282B22E52C00D26E2D /* GroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4272B22E52C00D26E2D /* GroupTableViewCell.swift */; };
 		DF89F42A2B22E68200D26E2D /* GroupsScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4292B22E68200D26E2D /* GroupsScreenView.swift */; };
 		DF89F42C2B22E6C000D26E2D /* GroupTableViewManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F42B2B22E6C000D26E2D /* GroupTableViewManager.swift */; };
+		DF89F4382B23B3C800D26E2D /* AddGroupScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4352B23B3C800D26E2D /* AddGroupScreen.swift */; };
+		DF89F4392B23B3C800D26E2D /* AddGroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4362B23B3C800D26E2D /* AddGroupViewController.swift */; };
+		DF89F43A2B23B3C800D26E2D /* AddGroupManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF89F4372B23B3C800D26E2D /* AddGroupManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -90,6 +93,9 @@
 		DF89F4272B22E52C00D26E2D /* GroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewCell.swift; sourceTree = "<group>"; };
 		DF89F4292B22E68200D26E2D /* GroupsScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsScreenView.swift; sourceTree = "<group>"; };
 		DF89F42B2B22E6C000D26E2D /* GroupTableViewManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupTableViewManager.swift; sourceTree = "<group>"; };
+		DF89F4352B23B3C800D26E2D /* AddGroupScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupScreen.swift; sourceTree = "<group>"; };
+		DF89F4362B23B3C800D26E2D /* AddGroupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupViewController.swift; sourceTree = "<group>"; };
+		DF89F4372B23B3C800D26E2D /* AddGroupManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddGroupManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,8 +210,19 @@
 				5A06E3982B23A46C00505603 /* Task View */,
 				5A06E3282B21399100505603 /* Authentication */,
 				5A06E3852B21784000505603 /* Groups Screen */,
+				DF89F4342B23B3C800D26E2D /* Add Group Screen */,
 			);
 			path = MobileAppDevFinal;
+			sourceTree = "<group>";
+		};
+		DF89F4342B23B3C800D26E2D /* Add Group Screen */ = {
+			isa = PBXGroup;
+			children = (
+				DF89F4352B23B3C800D26E2D /* AddGroupScreen.swift */,
+				DF89F4362B23B3C800D26E2D /* AddGroupViewController.swift */,
+				DF89F4372B23B3C800D26E2D /* AddGroupManager.swift */,
+			);
+			path = "Add Group Screen";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -306,9 +323,11 @@
 				5A06E3552B21399200505603 /* SettingsView.swift in Sources */,
 				5A06E37E2B21464100505603 /* GetTaskManager.swift in Sources */,
 				5A06E3892B22971100505603 /* Configs.swift in Sources */,
+				DF89F4382B23B3C800D26E2D /* AddGroupScreen.swift in Sources */,
 				5A06E3AC2B23A46D00505603 /* AddTaskPhotoManager.swift in Sources */,
 				5A06E3702B21399200505603 /* SettingsViewController.swift in Sources */,
 				DF89F42A2B22E68200D26E2D /* GroupsScreenView.swift in Sources */,
+				DF89F43A2B23B3C800D26E2D /* AddGroupManager.swift in Sources */,
 				5A06E38E2B22976300505603 /* ProgressSpinnerDelegate.swift in Sources */,
 				5A06E3722B213A8900505603 /* Task.swift in Sources */,
 				5A06E3AA2B23A46D00505603 /* AddTaskViewController.swift in Sources */,
@@ -317,6 +336,7 @@
 				DF89F4242B22E4D800D26E2D /* GroupsViewController.swift in Sources */,
 				5AE6F2EB2B0BEA59001C815F /* SceneDelegate.swift in Sources */,
 				5A06E38F2B22976300505603 /* ProgressSpinnerViewController.swift in Sources */,
+				DF89F4392B23B3C800D26E2D /* AddGroupViewController.swift in Sources */,
 				5A06E3662B21399200505603 /* ViewController.swift in Sources */,
 				5A06E38B2B22973F00505603 /* User.swift in Sources */,
 				5A06E3A82B23A46D00505603 /* GetTaskPhotoManager.swift in Sources */,

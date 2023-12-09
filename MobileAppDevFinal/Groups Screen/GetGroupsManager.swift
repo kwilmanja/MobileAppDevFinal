@@ -20,8 +20,7 @@ extension GroupsViewController {
                     var groups = [String]()
                     
                     for document in querySnapshot!.documents {
-                    groups.append(document.documentID)
-                    print("\(document.documentID)")
+                        groups.append(document.documentID)
                     }
                     
                     self.getGroups(groupIds: groups)
@@ -43,10 +42,11 @@ extension GroupsViewController {
                       do{
                           let g  = try document.data(as: Group.self)
                           self.groupsList.append(g)
-                      }catch{
+                      } catch {
                           print(error)
                       }
                     }
+                    self.groupsList.sort(by: {$0.name < $1.name}) // sort alphabetically
                     self.groupScreen.tableViewGroups.reloadData()
                 }
             }
