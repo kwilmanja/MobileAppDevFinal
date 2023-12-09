@@ -103,13 +103,14 @@ class TaskView: UIView {
             labelDescription.topAnchor.constraint(equalTo: labelDate.bottomAnchor, constant: 16),
             labelDescription.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
             
-            buttonDelete.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 8),
-            buttonDelete.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
-            
-            taskPic.topAnchor.constraint(equalTo: buttonDelete.bottomAnchor, constant: 8),
+            taskPic.topAnchor.constraint(equalTo: labelDescription.bottomAnchor, constant: 8),
             taskPic.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
-            taskPic.heightAnchor.constraint(equalToConstant: 500),
-            taskPic.widthAnchor.constraint(equalToConstant: 300)
+            taskPic.heightAnchor.constraint(equalToConstant: 200),
+            taskPic.widthAnchor.constraint(equalToConstant: 200),
+            
+            buttonDelete.topAnchor.constraint(equalTo: taskPic.bottomAnchor, constant: 8),
+            buttonDelete.centerXAnchor.constraint(equalTo: contentWrapper.centerXAnchor),
+            buttonDelete.bottomAnchor.constraint(equalTo: contentWrapper.bottomAnchor)
             
             
         ])
